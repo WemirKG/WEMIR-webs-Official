@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact • WEMIR webs</title>
+
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-bg"></div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="shell header-shell">
+      <div class="brand-lockup">
+        <div class="brand-mark"></div>
+        <div class="brand-text">
+          <span class="brand-title">WEMIR webs</span>
+          <span class="brand-tagline">AI-powered web studio</span>
+        </div>
+      </div>
+
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="demos.html" class="nav-link">Demos</a>
+        <a href="intake.html" class="nav-link">Intake</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+        <a href="privacy.html" class="nav-link">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- CONTACT HERO -->
+    <section class="contact-page">
+      <div class="shell contact-shell">
+        <header class="contact-header">
+          <p class="contact-kicker">LET’S TALK FUTURE</p>
+          <h1>Contact WEMIR webs</h1>
+          <p class="contact-sub">
+            Whether you’re ready to start a project, get a quote, or just ask a question,
+            this is where your next website begins.
+          </p>
+        </header>
+
+        <div class="contact-layout">
+          <!-- LEFT SIDE: INFO -->
+          <div class="contact-info-panel">
+            <div class="contact-info-card">
+              <p class="contact-info-label">You + WEMIR webs</p>
+              <h2>What we can help you with</h2>
+              <ul class="contact-list">
+                <li>New website or landing page builds</li>
+                <li>Upgrading an existing site to feel modern</li>
+                <li>Integrating AI tools into your flow</li>
+                <li>Questions about process, pricing, or ideas</li>
+              </ul>
+            </div>
+
+            <div class="contact-meta">
+              <div class="contact-chip">
+                <span class="chip-label">Average reply</span>
+                <span class="chip-value">Within 24–48 hours</span>
+              </div>
+              <div class="contact-chip">
+                <span class="chip-label">Best for</span>
+                <span class="chip-value">Quick questions & first touch</span>
+              </div>
+            </div>
+
+            <div class="contact-alt">
+              <p class="contact-alt-label">Prefer email?</p>
+              <p class="contact-alt-value">
+                Reach out directly at
+                <a href="mailto:youremail@example.com">youremail@example.com</a>
+              </p>
+              <p class="contact-alt-note">
+                For full project details, you can also use the
+                <a href="intake.html">intake form</a>.
+              </p>
+            </div>
+          </div>
+
+          <!-- RIGHT SIDE: FORM -->
+          <div class="contact-form-panel">
+            <form
+              class="contact-form"
+              method="POST"
+              action="https://formspree.io/f/YOUR_FORM_ID_HERE"
+            >
+              <!-- Replace YOUR_FORM_ID_HERE with your real Formspree / Freespree ID -->
+
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="name">Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Your name"
+                    required
+                  />
+                </div>
+                <div class="form-field">
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="you@example.com"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="social">Instagram / Social (optional)</label>
+                  <input
+                    type="text"
+                    id="social"
+                    name="social"
+                    placeholder="@yourhandle"
+                  />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="topic">What are you reaching out about?</label>
+                  <select id="topic" name="topic" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="new-website">New website or landing page</option>
+                    <option value="upgrade">Upgrade my current website</option>
+                    <option value="ai-integration">AI tools & automation</option>
+                    <option value="question">General question / other</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="budget">Rough budget (optional)</label>
+                  <select id="budget" name="budget">
+                    <option value="" selected>No idea yet</option>
+                    <option value="under-300">Under $300</option>
+                    <option value="300-750">$300–$750</option>
+                    <option value="750-1500">$750–$1,500</option>
+                    <option value="1500-plus">$1,500+</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="message">Tell me a bit about what you want to build</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    placeholder="Share your idea, goals, or any links you want me to see."
+                    required
+                  ></textarea>
+                </div>
+              </div>
+
+              <div class="form-footer">
+                <button type="submit" class="btn btn-solid">
+                  Send message to WEMIR webs
+                </button>
+                <p class="form-note">
+                  By sending this form, you agree to the
+                  <a href="privacy.html">privacy policy</a>.
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="shell footer-shell">
+      <p class="footer-mission">
+        WEMIR webs builds fast, modern, AI-powered websites made to help your business grow.
+      </p>
+      <p class="footer-contact">
+        Contact:
+        <a href="mailto:youremail@example.com">youremail@example.com</a>
+      </p>
+      <p class="footer-copy">
+        © 2025 WEMIR webs — All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
