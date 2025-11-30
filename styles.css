@@ -445,63 +445,6 @@ body {
   font-size: 0.86rem;
   color: var(--text-muted);
 }
-
-/* ===== DEMOS ===== */
-.demos {
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.demo-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.4rem;
-  margin-bottom: 2rem;
-}
-
-.demo-card {
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  background: rgba(8, 8, 10, 0.95);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
-}
-
-.demo-preview {
-  height: 150px;
-  background-size: cover;
-  background-position: center;
-}
-
-/* Abstract monochrome gradients with a touch of red */
-.demo-one {
-  background-image: linear-gradient(135deg, #ffffff 0%, #ff7777 40%, #000000 100%);
-}
-
-.demo-two {
-  background-image: linear-gradient(135deg, #111111, #888888, #ffffff);
-}
-
-.demo-three {
-  background-image: linear-gradient(135deg, #000000, #444444, #ff4444);
-}
-
-.demo-body {
-  padding: 1rem 1.1rem 1.1rem;
-}
-
-.demo-body h3 {
-  margin: 0 0 0.4rem;
-  font-size: 0.98rem;
-}
-
-.demo-body p {
-  margin: 0;
-  font-size: 0.88rem;
-  color: var(--text-muted);
-}
-
-.demo-cta {
-  text-align: center;
 }
 
 /* ===== Bottom CTA ===== */
