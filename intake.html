@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Intake • WEMIR webs</title>
+
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-bg"></div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="shell header-shell">
+      <div class="brand-lockup">
+        <div class="brand-mark"></div>
+        <div class="brand-text">
+          <span class="brand-title">WEMIR webs</span>
+          <span class="brand-tagline">AI-powered web studio</span>
+        </div>
+      </div>
+
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="demos.html" class="nav-link">Demos</a>
+        <a href="intake.html" class="nav-link active">Intake</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="privacy.html" class="nav-link">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- INTAKE PAGE -->
+    <section class="intake-page">
+      <div class="shell intake-shell">
+        <header class="intake-header">
+          <p class="intake-kicker">PROJECT INTAKE • STEP 1</p>
+          <h1>Tell WEMIR webs what you want to build</h1>
+          <p class="intake-sub">
+            This form helps map out your website in a simple, clear way.
+            Share as much as you can — rough ideas are welcome. Clean details now
+            = faster builds later.
+          </p>
+        </header>
+
+        <div class="intake-layout">
+          <!-- LEFT: SUMMARY + STEPS -->
+          <div class="intake-side-panel">
+            <div class="intake-card">
+              <p class="intake-label">How this works</p>
+              <h2>Your project in two steps</h2>
+              <ol class="intake-steps">
+                <li><span>1</span> Fill out this intake form with your idea.</li>
+                <li><span>2</span> Book a call to lock in details & timeline.</li>
+              </ol>
+              <p class="intake-note">
+                You don’t need to know all the “tech words.” Just describe what you
+                want, how you want people to feel, and what actions you want them to take.
+              </p>
+            </div>
+
+            <div class="intake-highlights">
+              <div class="intake-chip">
+                <span class="chip-label">Ideal for</span>
+                <span class="chip-value">Simple sites, starters, first builds</span>
+              </div>
+              <div class="intake-chip">
+                <span class="chip-label">Website style</span>
+                <span class="chip-value">Modern, fun, professional, AI-aware</span>
+              </div>
+            </div>
+
+            <div class="intake-alt">
+              <p class="intake-alt-text">
+                If you just have a quick question, you can also
+                <a href="contact.html">use the contact page</a>.
+              </p>
+            </div>
+          </div>
+
+          <!-- RIGHT: FORM -->
+          <div class="intake-form-panel">
+            <form
+              class="intake-form"
+              method="POST"
+              action="https://formspree.io/f/YOUR_FORM_ID_HERE"
+            >
+              <!-- Replace YOUR_FORM_ID_HERE with your actual Formspree / Freespree endpoint -->
+
+              <!-- Basic Info -->
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="intake-name">Name</label>
+                  <input
+                    type="text"
+                    id="intake-name"
+                    name="name"
+                    placeholder="Your name"
+                    required
+                  />
+                </div>
+                <div class="form-field">
+                  <label for="intake-email">Email</label>
+                  <input
+                    type="email"
+                    id="intake-email"
+                    name="email"
+                    placeholder="you@example.com"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="intake-business">Business / brand name</label>
+                  <input
+                    type="text"
+                    id="intake-business"
+                    name="business_name"
+                    placeholder="Brand, project or idea name"
+                  />
+                </div>
+                <div class="form-field">
+                  <label for="intake-industry">Industry / niche</label>
+                  <input
+                    type="text"
+                    id="intake-industry"
+                    name="industry"
+                    placeholder="Example: hair studio, creator, consulting..."
+                  />
+                </div>
+              </div>
+
+              <!-- Website basics -->
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="intake-site-type">What type of website do you want?</label>
+                  <select id="intake-site-type" name="website_type" required>
+                    <option value="" disabled selected>Select one</option>
+                    <option value="simple-landing">
+                      Simple landing page (one main page)
+                    </option>
+                    <option value="multi-page-business">
+                      Multi-page business website
+                    </option>
+                    <option value="creator-portfolio">
+                      Creator / portfolio style
+                    </option>
+                    <option value="online-store">
+                      Online store / product focused
+                    </option>
+                    <option value="not-sure">I’m not sure yet</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="intake-existing-site">
+                    Do you already have a website?
+                  </label>
+                  <select id="intake-existing-site" name="existing_website">
+                    <option value="no" selected>No</option>
+                    <option value="yes-live">Yes, it’s live right now</option>
+                    <option value="yes-in-progress">Yes, but it’s not finished</option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label for="intake-site-url">If yes, drop the link here (optional)</label>
+                  <input
+                    type="url"
+                    id="intake-site-url"
+                    name="current_site_url"
+                    placeholder="https://your-site.com"
+                  />
+                </div>
+              </div>
+
+              <!-- Pages & content -->
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="intake-pages">
+                    What main pages do you think you’ll need?
+                  </label>
+                  <textarea
+                    id="intake-pages"
+                    name="pages"
+                    rows="3"
+                    placeholder="Example: Home, About, Services, Contact, Booking, Gallery..."
+                  ></textarea>
+                </div>
+              </div>
+
+              <!-- Look & feel -->
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="intake-vibe">
+                    How do you want your website to feel?
+                  </label>
+                  <textarea
+                    id="intake-vibe"
+                    name="vibe"
+                    rows="3"
+                    placeholder="Example: clean, futuristic, fun, minimal, luxury, bold, etc."
+                  ></textarea>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="intake-examples">
+                    Any example websites or links you like? (optional)
+                  </label>
+                  <textarea
+                    id="intake-examples"
+                    name="inspiration_links"
+                    rows="3"
+                    placeholder="Drop any links you like the look of."
+                  ></textarea>
+                </div>
+              </div>
+
+              <!-- AI & functionality -->
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="intake-ai">
+                    What kind of AI tools are you interested in?
+                  </label>
+                  <textarea
+                    id="intake-ai"
+                    name="ai_tools"
+                    rows="3"
+                    placeholder="Example: smart contact form, automated replies, content help, booking flows, etc."
+                  ></textarea>
+                </div>
+              </div>
+
+              <!-- Timeline & budget -->
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="intake-timeline">
+                    When would you ideally like to launch?
+                  </label>
+                  <select id="intake-timeline" name="timeline">
+                    <option value="" selected>No specific date</option>
+                    <option value="two-weeks">Within 2 weeks</option>
+                    <option value="one-month">Within 1 month</option>
+                    <option value="two-months">Within 2 months</option>
+                    <option value="flexible">I’m flexible</option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label for="intake-budget">
+                    Rough budget range (just a guess is okay)
+                  </label>
+                  <select id="intake-budget" name="budget">
+                    <option value="" selected>No idea yet</option>
+                    <option value="under-300">Under $300</option>
+                    <option value="300-750">$300–$750</option>
+                    <option value="750-1500">$750–$1,500</option>
+                    <option value="1500-plus">$1,500+</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Final details -->
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="intake-notes">
+                    Anything else you want WEMIR webs to know?
+                  </label>
+                  <textarea
+                    id="intake-notes"
+                    name="extra_notes"
+                    rows="4"
+                    placeholder="Drop any extra context, questions, or ideas here."
+                  ></textarea>
+                </div>
+              </div>
+
+              <div class="form-footer">
+                <button type="submit" class="btn btn-solid">
+                  Submit intake to WEMIR webs
+                </button>
+                <p class="form-note">
+                  After this, you’ll be able to
+                  <a href="contact.html">book a call</a> to finalize details.
+                  By sending this form, you agree to the
+                  <a href="privacy.html">privacy policy</a>.
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="shell footer-shell">
+      <p class="footer-mission">
+        WEMIR webs builds fast, modern, AI-powered websites made to help your business grow.
+      </p>
+      <p class="footer-contact">
+        Contact:
+        <a href="mailto:youremail@example.com">youremail@example.com</a>
+      </p>
+      <p class="footer-copy">
+        © 2025 WEMIR webs — All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
