@@ -167,26 +167,49 @@
                   ></textarea>
                 </div>
               </div>
-
-              <div class="form-footer">
-       <form
-  id="contact-form"
-  class="contact-form"
-  action="https://formspree.io/f/xvgezwzv"
-  method="POST"
->
-                <button type="submit" class="btn btn-solid">
-                  Send message to WEMIR webs
-                </button>
-                <p class="form-note">
-                  By sending this form, you agree to the
-                  <a href="privacy.html">privacy policy</a>.
-                </p>
-              </div>
-            </form>
-          </div>
-        </div>
+              <!-- RIGHT SIDE: FORM -->
+<div class="contact-form-panel">
+  <form
+    id="contact-form"
+    class="contact-form"
+    action="https://formspree.io/f/abcd1234"  <!-- 👈 your real Formspree URL -->
+    method="POST"
+  >
+    <div class="form-row">
+      <div class="form-field">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Your name"
+          required
+        />
       </div>
+      <div class="form-field">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="you@example.com"
+          required
+        />
+      </div>
+    </div>
+
+    <!-- all your other form-row / form-field blocks here -->
+
+    <div class="form-footer">
+      <button type="submit" class="btn btn-solid">
+        Send message to WEMIR webs
+      </button>
+      <p class="form-note">
+        By sending this form, you agree to the
+        <a href="privacy.html">privacy policy</a>.
+      </p>
+    </div>
+  </form>
     </section>
   </main>
 
