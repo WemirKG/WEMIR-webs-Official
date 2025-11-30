@@ -894,3 +894,188 @@ body {
     padding: 1.4rem 1.3rem 1.5rem;
   }
 }
+/* ===== INTAKE PAGE ===== */
+
+.intake-page {
+  padding: 4.2rem 0 4.1rem;
+}
+
+.intake-shell {
+  max-width: 1000px;
+}
+
+.intake-header {
+  max-width: 680px;
+  margin-bottom: 2.7rem;
+}
+
+.intake-kicker {
+  font-size: 0.78rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 0 0 0.6rem;
+}
+
+.intake-header h1 {
+  margin: 0 0 0.6rem;
+  font-size: 2rem;
+}
+
+.intake-sub {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.intake-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.15fr);
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+/* Left side */
+.intake-side-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.intake-card {
+  padding: 1.6rem 1.5rem;
+  border-radius: 24px;
+  background: radial-gradient(circle at top left, rgba(255, 64, 64, 0.2), rgba(8, 8, 12, 0.96));
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.78);
+}
+
+.intake-label {
+  margin: 0 0 0.4rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.intake-card h2 {
+  margin: 0 0 0.7rem;
+  font-size: 1.2rem;
+}
+
+.intake-steps {
+  margin: 0 0 0.6rem;
+  padding-left: 0;
+  list-style: none;
+  font-size: 0.9rem;
+  color: var(--text-main);
+}
+
+.intake-steps li {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 0.35rem;
+}
+
+.intake-steps li span {
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+}
+
+.intake-note {
+  margin: 0;
+  font-size: 0.86rem;
+  color: var(--text-muted);
+}
+
+.intake-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.intake-chip {
+  padding: 0.6rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(10, 10, 14, 0.96);
+  display: inline-flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.intake-alt {
+  font-size: 0.86rem;
+  color: var(--text-muted);
+}
+
+.intake-alt-text {
+  margin: 0;
+}
+
+.intake-alt a {
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+.intake-alt a:hover {
+  border-bottom-color: var(--accent-red);
+}
+
+/* Right side form */
+.intake-form-panel {
+  background: rgba(8, 8, 10, 0.97);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.9);
+  padding: 1.7rem 1.7rem 1.8rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.intake-form-panel::before {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background:
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.14), transparent 60%),
+    radial-gradient(circle at bottom left, rgba(255, 64, 64, 0.24), transparent 70%);
+  opacity: 0.78;
+  pointer-events: none;
+}
+
+.intake-form {
+  position: relative;
+  z-index: 1;
+}
+
+/* Reuse existing form-row, form-field, inputs, textarea, etc. from contact styles */
+/* (They already exist above, so this form will inherit that styling.) */
+
+@media (max-width: 900px) {
+  .intake-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .intake-form-panel {
+    order: -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .intake-header h1 {
+    font-size: 1.7rem;
+  }
+
+  .intake-form-panel {
+    padding: 1.5rem 1.4rem 1.6rem;
+  }
+}
