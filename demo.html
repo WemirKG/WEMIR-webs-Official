@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demos • WEMIR webs</title>
+
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-bg"></div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="shell header-shell">
+      <div class="brand-lockup">
+        <div class="brand-mark"></div>
+        <div class="brand-text">
+          <span class="brand-title">WEMIR webs</span>
+          <span class="brand-tagline">AI-powered web studio</span>
+        </div>
+      </div>
+
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="demos.html" class="nav-link active">Demos</a>
+        <a href="intake.html" class="nav-link">Intake</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="privacy.html" class="nav-link">Privacy</a>
+        <a href="terms.html" class="nav-link">Terms</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="demo-builder">
+      <div class="shell demo-shell">
+        <header class="demo-header">
+          <p class="demo-kicker">INTERACTIVE DEMO</p>
+          <h1>Design a sample layout with WEMIR webs</h1>
+          <p class="demo-sub">
+            Use this mini builder to test ideas: choose how many pages you want,
+            pick an accent color, and see a live preview of a sample WEMIR webs
+            layout update in real time.
+          </p>
+        </header>
+
+        <div class="demo-layout">
+          <!-- LEFT: CONTROLS -->
+          <div class="demo-controls-panel">
+            <div class="demo-card">
+              <p class="demo-label">Step 1</p>
+              <h2>How many pages?</h2>
+              <div class="demo-control">
+                <label for="pageCount">
+                  Number of pages
+                  <span class="demo-pill">
+                    <span id="pageCountValue">3</span> pages
+                  </span>
+                </label>
+                <input
+                  type="range"
+                  id="pageCount"
+                  min="1"
+                  max="7"
+                  value="3"
+                />
+                <p class="demo-hint">
+                  This creates a sample navigation with the same number of pages.
+                </p>
+              </div>
+            </div>
+
+            <div class="demo-card">
+              <p class="demo-label">Step 2</p>
+              <h2>Choose an accent color</h2>
+              <div class="demo-control">
+                <label for="accentColor">Accent color</label>
+                <input
+                  type="color"
+                  id="accentColor"
+                  value="#ff4040"
+                />
+                <p class="demo-hint">
+                  This updates buttons, highlights, and active links in the preview.
+                </p>
+              </div>
+
+              <div class="demo-swatches">
+                <button type="button" class="swatch" data-color="#ff4040"></button>
+                <button type="button" class="swatch" data-color="#ffb347"></button>
+                <button type="button" class="swatch" data-color="#49c6ff"></button>
+                <button type="button" class="swatch" data-color="#9b59ff"></button>
+                <button type="button" class="swatch" data-color="#40ff96"></button>
+              </div>
+            </div>
+
+            <div class="demo-card">
+              <p class="demo-label">Step 3</p>
+              <h2>Pick a layout vibe</h2>
+              <div class="demo-control">
+                <label for="layoutStyle">Layout style</label>
+                <select id="layoutStyle">
+                  <option value="classic" selected>Classic business</option>
+                  <option value="creator">Creator / portfolio</option>
+                  <option value="hero">Big hero landing</option>
+                </select>
+                <p class="demo-hint">
+                  This slightly changes the preview’s hero layout and tags.
+                </p>
+              </div>
+            </div>
+
+            <div class="demo-summary">
+              <p class="demo-summary-title">Your current demo</p>
+              <p class="demo-summary-line">
+                <span id="summaryPages">3</span> pages • Accent
+                <span id="summaryColor">#ff4040</span> • Style:
+                <span id="summaryStyle">Classic business</span>
+              </p>
+              <p class="demo-summary-note">
+                This is just a visual mockup. Your actual project will be fully custom.
+              </p>
+            </div>
+          </div>
+
+          <!-- RIGHT: LIVE PREVIEW -->
+          <div class="demo-preview-panel">
+            <div class="demo-preview-frame" id="demoPreview">
+              <div class="demo-preview-top">
+                <div class="preview-dots">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="preview-url-bar">
+                  wemir-webs.demo / <span id="previewUrlSegment">classic</span>
+                </div>
+              </div>
+
+              <div class="demo-preview-body">
+                <div class="preview-nav">
+                  <div class="preview-logo">LOGO</div>
+                  <ul class="preview-nav-list" id="previewNav"></ul>
+                  <button class="preview-cta">Get started</button>
+                </div>
+
+                <div class="preview-main">
+                  <div class="preview-hero">
+                    <p class="preview-tag" id="previewTag">Classic business layout</p>
+                    <h2 id="previewTitle">
+                      A clean WEMIR webs homepage for your brand
+                    </h2>
+                    <p id="previewText">
+                      This is a sample structure showing how your pages, colors, and
+                      layout choices could come together in a real build.
+                    </p>
+                    <div class="preview-buttons">
+                      <button class="preview-btn primary">Book a call</button>
+                      <button class="preview-btn ghost">View pages</button>
+                    </div>
+                  </div>
+
+                  <div class="preview-sections">
+                    <div class="preview-section-block"></div>
+                    <div class="preview-section-block"></div>
+                    <div class="preview-section-block wide"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <p class="demo-preview-note">
+              This is a live, interactive mockup — it doesn’t save anything.
+              To start a real project, use the <a href="intake.html">intake form</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="shell footer-shell">
+      <p class="footer-mission">
+        WEMIR webs builds fast, modern, AI-powered websites made to help your business grow.
+      </p>
+      <p class="footer-contact">
+        Contact:
+        <a href="mailto:youremail@example.com">youremail@example.com</a>
+      </p>
+      <p class="footer-copy">
+        © 2025 WEMIR webs — All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- SIMPLE JS FOR LIVE PREVIEW -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const pageRange = document.getElementById("pageCount");
+      const pageCountValue = document.getElementById("pageCountValue");
+      const summaryPages = document.getElementById("summaryPages");
+      const colorPicker = document.getElementById("accentColor");
+      const summaryColor = document.getElementById("summaryColor");
+      const layoutSelect = document.getElementById("layoutStyle");
+      const summaryStyle = document.getElementById("summaryStyle");
+      const previewFrame = document.getElementById("demoPreview");
+      const previewNav = document.getElementById("previewNav");
+      const previewUrlSegment = document.getElementById("previewUrlSegment");
+      const previewTag = document.getElementById("previewTag");
+      const previewTitle = document.getElementById("previewTitle");
+      const previewText = document.getElementById("previewText");
+      const swatches = document.querySelectorAll(".swatch");
+
+      function updatePages() {
+        const count = parseInt(pageRange.value, 10);
+        pageCountValue.textContent = count;
+        summaryPages.textContent = count;
+
+        previewNav.innerHTML = "";
+        for (let i = 1; i <= count; i++) {
+          const li = document.createElement("li");
+          li.textContent = "Page " + i;
+          if (i === 1) li.classList.add("active");
+          previewNav.appendChild(li);
+        }
+      }
+
+      function updateColor(color) {
+        previewFrame.style.setProperty("--preview-accent", color);
+        summaryColor.textContent = color.toLowerCase();
+        colorPicker.value = color;
+      }
+
+      function updateLayout() {
+        const value = layoutSelect.value;
+        let tag = "";
+        let title = "";
+        let text = "";
+        let segment = "";
+
+        if (value === "classic") {
+          tag = "Classic business layout";
+          title = "A clean WEMIR webs homepage for your brand";
+          text =
+            "Straightforward sections, clear navigation, and a focused hero for service-based businesses.";
+          segment = "classic";
+        } else if (value === "creator") {
+          tag = "Creator / portfolio layout";
+          title = "Showcase your work, content, and personality";
+          text =
+            "A layout built for creators: highlight projects, social links, and offers in one smooth flow.";
+          segment = "creator";
+        } else {
+          tag = "Hero-first landing layout";
+          title = "Big hero, strong CTA, high impact";
+          text =
+            "Perfect for launches, campaigns, or single-offer pages that need to hit hard from the first scroll.";
+          segment = "hero";
+        }
+
+        previewTag.textContent = tag;
+        previewTitle.textContent = title;
+        previewText.textContent = text;
+        previewUrlSegment.textContent = segment;
+        summaryStyle.textContent = layoutSelect.options[layoutSelect.selectedIndex].text;
+      }
+
+      // Event listeners
+      pageRange.addEventListener("input", updatePages);
+      colorPicker.addEventListener("input", (e) => updateColor(e.target.value));
+      layoutSelect.addEventListener("change", updateLayout);
+
+      swatches.forEach((swatch) => {
+        swatch.style.backgroundColor = swatch.dataset.color;
+        swatch.addEventListener("click", () => {
+          updateColor(swatch.dataset.color);
+        });
+      });
+
+      // Initial state
+      updatePages();
+      updateColor(colorPicker.value);
+      updateLayout();
+    });
+  </script>
+</body>
+</html>
