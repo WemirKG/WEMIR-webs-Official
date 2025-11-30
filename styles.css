@@ -7,6 +7,8 @@
   --text-muted: #a0a0aa;
   --accent: #f5f5f5;
   --accent-soft: rgba(255, 255, 255, 0.12);
+  --accent-red: #ff4040;
+  --accent-red-soft: rgba(255, 64, 64, 0.32);
   --line-soft: rgba(255, 255, 255, 0.08);
   --shadow-soft: 0 18px 50px rgba(0, 0, 0, 0.55);
   --radius-lg: 24px;
@@ -35,12 +37,13 @@ body {
   min-height: 100vh;
 }
 
-/* ===== Background: mixed monochrome + subtle glow + hint of “web” ===== */
+/* ===== Background: mixed monochrome + subtle glow + hint of “web” + dash of red ===== */
 .page-bg {
   position: fixed;
   inset: 0;
   z-index: -1;
   background:
+    radial-gradient(circle at top center, rgba(255, 64, 64, 0.16), transparent 55%),
     radial-gradient(circle at top left, rgba(255, 255, 255, 0.14), transparent 55%),
     radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.1), transparent 55%),
     repeating-linear-gradient(
@@ -105,8 +108,10 @@ body {
   height: 26px;
   border-radius: 10px;
   background:
-    radial-gradient(circle at 20% 0%, #ffffff, #777777 40%, #000000 90%);
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22);
+    radial-gradient(circle at 20% 0%, #ffffff, #ff8a8a 35%, #3b0000 75%, #000000 100%);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.22),
+    0 0 18px rgba(255, 64, 64, 0.45);
 }
 
 .brand-text {
@@ -149,8 +154,8 @@ body {
 }
 
 .nav-link.active {
-  background: rgba(255, 255, 255, 0.14);
-  border-color: rgba(255, 255, 255, 0.32);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--accent-red-soft);
   color: #ffffff;
 }
 
@@ -181,7 +186,7 @@ body {
 }
 
 .hero-accent {
-  background: linear-gradient(90deg, #ffffff, #cfcfcf);
+  background: linear-gradient(90deg, #ffffff, #ffb3b3);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -232,7 +237,7 @@ body {
   inset: -40%;
   background:
     radial-gradient(circle at top right, rgba(255, 255, 255, 0.16), transparent 60%),
-    radial-gradient(circle at bottom left, rgba(255, 255, 255, 0.1), transparent 60%);
+    radial-gradient(circle at bottom left, rgba(255, 64, 64, 0.24), transparent 65%);
   opacity: 0.65;
   pointer-events: none;
 }
@@ -268,7 +273,7 @@ body {
   width: 1.4rem;
   height: 1.4rem;
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid var(--accent-red-soft);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -287,7 +292,7 @@ body {
   flex: 1;
   padding: 0.6rem 0.7rem;
   border-radius: var(--radius-md);
-  background: radial-gradient(circle at top, rgba(255, 255, 255, 0.16), rgba(0, 0, 0, 0.88));
+  background: radial-gradient(circle at top, rgba(255, 255, 255, 0.12), rgba(0, 0, 0, 0.92));
   border: 1px solid rgba(255, 255, 255, 0.18);
   text-align: left;
 }
@@ -296,6 +301,7 @@ body {
   display: block;
   font-size: 0.95rem;
   font-weight: 600;
+  color: var(--accent-red);
 }
 
 .metric-label {
@@ -322,12 +328,17 @@ body {
 .btn-solid {
   background: #ffffff;
   color: #000000;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+  border-color: var(--accent-red-soft);
+  box-shadow:
+    0 16px 40px rgba(0, 0, 0, 0.4),
+    0 0 18px rgba(255, 64, 64, 0.45);
 }
 
 .btn-solid:hover {
   transform: translateY(-1px);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.6),
+    0 0 22px rgba(255, 64, 64, 0.6);
 }
 
 .btn-outline {
@@ -337,7 +348,8 @@ body {
 }
 
 .btn-outline:hover {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 64, 64, 0.12);
+  border-color: var(--accent-red-soft);
 }
 
 .btn-soft {
@@ -460,9 +472,9 @@ body {
   background-position: center;
 }
 
-/* Abstract monochrome gradients that you can replace later with real screenshots */
+/* Abstract monochrome gradients with a touch of red */
 .demo-one {
-  background-image: linear-gradient(135deg, #ffffff 0%, #555555 50%, #000000 100%);
+  background-image: linear-gradient(135deg, #ffffff 0%, #ff7777 40%, #000000 100%);
 }
 
 .demo-two {
@@ -470,7 +482,7 @@ body {
 }
 
 .demo-three {
-  background-image: linear-gradient(135deg, #000000, #444444, #bbbbbb);
+  background-image: linear-gradient(135deg, #000000, #444444, #ff4444);
 }
 
 .demo-body {
@@ -503,8 +515,8 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.18);
   background: linear-gradient(
     135deg,
-    rgba(255, 255, 255, 0.04),
-    rgba(0, 0, 0, 0.92)
+    rgba(255, 64, 64, 0.24),
+    rgba(0, 0, 0, 0.95)
   );
   box-shadow: 0 22px 70px rgba(0, 0, 0, 0.8);
   padding: 2.2rem 2.1rem;
@@ -560,7 +572,7 @@ body {
 }
 
 .footer-contact a:hover {
-  border-bottom-color: #ffffff;
+  border-bottom-color: var(--accent-red);
 }
 
 .footer-copy {
