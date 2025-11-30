@@ -1079,3 +1079,141 @@ body {
     padding: 1.5rem 1.4rem 1.6rem;
   }
 }
+/* ===== PRIVACY PAGE ===== */
+
+.privacy-page {
+  padding: 4.2rem 0 4.1rem;
+}
+
+.privacy-shell {
+  max-width: 1040px;
+}
+
+.privacy-header {
+  max-width: 700px;
+  margin-bottom: 2.8rem;
+}
+
+.privacy-kicker {
+  font-size: 0.78rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 0 0 0.6rem;
+}
+
+.privacy-header h1 {
+  margin: 0 0 0.6rem;
+  font-size: 2rem;
+}
+
+.privacy-sub {
+  margin: 0 0 0.4rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.privacy-meta {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.privacy-meta span {
+  color: #ffffff;
+}
+
+.privacy-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 1.6rem;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.privacy-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.privacy-card {
+  padding: 1.4rem 1.35rem;
+  border-radius: 22px;
+  background: rgba(8, 8, 10, 0.97);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.9);
+  position: relative;
+  overflow: hidden;
+}
+
+.privacy-card::before {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background:
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.12), transparent 60%),
+    radial-gradient(circle at bottom left, rgba(255, 64, 64, 0.22), transparent 70%);
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.privacy-card h2 {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 0.6rem;
+  font-size: 1.1rem;
+}
+
+.privacy-card h3 {
+  position: relative;
+  z-index: 1;
+  margin: 0.8rem 0 0.3rem;
+  font-size: 0.95rem;
+}
+
+.privacy-card p,
+.privacy-card ul {
+  position: relative;
+  z-index: 1;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0 0 0.4rem;
+}
+
+.privacy-card ul {
+  padding-left: 1.1rem;
+}
+
+.privacy-contact a {
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+.privacy-contact a:hover {
+  border-bottom-color: var(--accent-red);
+}
+
+.privacy-disclaimer {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  max-width: 740px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .privacy-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .privacy-header h1 {
+    font-size: 1.7rem;
+  }
+
+  .privacy-card {
+    padding: 1.3rem 1.2rem;
+  }
+}
